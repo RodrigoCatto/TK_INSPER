@@ -1,0 +1,2 @@
+ddynamic_reconfigure:razor_imu_9dof:realsense-ros/realsense2_camera:realsense-ros/realsense2_description:tk_llc:ydlidar
+-DCATKIN_DEVEL_PREFIX=/home/rodrigo/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/rodrigo/catkin_ws/install -G Unix Makefiles
