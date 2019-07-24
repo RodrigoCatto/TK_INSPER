@@ -26,6 +26,54 @@ BUILD_SHARED_LIBS:BOOL=ON
 //Use OpenMP
 BUILD_WITH_OPENMP:BOOL=OFF
 
+//Boost atomic library (debug)
+Boost_ATOMIC_LIBRARY_DEBUG:FILEPATH=/usr/lib/aarch64-linux-gnu/libboost_atomic.so
+
+//Boost atomic library (release)
+Boost_ATOMIC_LIBRARY_RELEASE:FILEPATH=/usr/lib/aarch64-linux-gnu/libboost_atomic.so
+
+//Boost chrono library (debug)
+Boost_CHRONO_LIBRARY_DEBUG:FILEPATH=/usr/lib/aarch64-linux-gnu/libboost_chrono.so
+
+//Boost chrono library (release)
+Boost_CHRONO_LIBRARY_RELEASE:FILEPATH=/usr/lib/aarch64-linux-gnu/libboost_chrono.so
+
+//Boost date_time library (debug)
+Boost_DATE_TIME_LIBRARY_DEBUG:FILEPATH=/usr/lib/aarch64-linux-gnu/libboost_date_time.so
+
+//Boost date_time library (release)
+Boost_DATE_TIME_LIBRARY_RELEASE:FILEPATH=/usr/lib/aarch64-linux-gnu/libboost_date_time.so
+
+//The directory containing a CMake configuration file for Boost.
+Boost_DIR:PATH=Boost_DIR-NOTFOUND
+
+//Path to a file.
+Boost_INCLUDE_DIR:PATH=/usr/include
+
+//Boost library directory DEBUG
+Boost_LIBRARY_DIR_DEBUG:PATH=/usr/lib/aarch64-linux-gnu
+
+//Boost library directory RELEASE
+Boost_LIBRARY_DIR_RELEASE:PATH=/usr/lib/aarch64-linux-gnu
+
+//Boost signals library (debug)
+Boost_SIGNALS_LIBRARY_DEBUG:FILEPATH=/usr/lib/aarch64-linux-gnu/libboost_signals.so
+
+//Boost signals library (release)
+Boost_SIGNALS_LIBRARY_RELEASE:FILEPATH=/usr/lib/aarch64-linux-gnu/libboost_signals.so
+
+//Boost system library (debug)
+Boost_SYSTEM_LIBRARY_DEBUG:FILEPATH=/usr/lib/aarch64-linux-gnu/libboost_system.so
+
+//Boost system library (release)
+Boost_SYSTEM_LIBRARY_RELEASE:FILEPATH=/usr/lib/aarch64-linux-gnu/libboost_system.so
+
+//Boost thread library (debug)
+Boost_THREAD_LIBRARY_DEBUG:FILEPATH=/usr/lib/aarch64-linux-gnu/libboost_thread.so
+
+//Boost thread library (release)
+Boost_THREAD_LIBRARY_RELEASE:FILEPATH=/usr/lib/aarch64-linux-gnu/libboost_thread.so
+
 //List of ';' separated packages to exclude
 CATKIN_BLACKLIST_PACKAGES:STRING=
 
@@ -240,6 +288,9 @@ EMPY_EXECUTABLE:FILEPATH=/usr/bin/empy
 //Empy script
 EMPY_SCRIPT:STRING=/usr/bin/empy
 
+//The directory containing a CMake configuration file for Eigen3.
+Eigen3_DIR:PATH=/usr/lib/cmake/eigen3
+
 //The directory containing a CMake configuration file for GMock.
 GMock_DIR:PATH=GMock_DIR-NOTFOUND
 
@@ -266,6 +317,9 @@ LSB_RELEASE_EXECUTABLE:FILEPATH=/usr/bin/lsb_release
 
 //Path to a program.
 NOSETESTS:FILEPATH=/usr/bin/nosetests-2.7
+
+//The directory containing a CMake configuration file for OpenCV.
+OpenCV_DIR:PATH=/usr/share/OpenCV
 
 //Path to a program.
 PYTHON_EXECUTABLE:FILEPATH=/usr/bin/python2
@@ -379,6 +433,12 @@ genpy_DIR:PATH=/opt/ros/melodic/share/genpy/cmake
 geometry_msgs_DIR:PATH=/opt/ros/melodic/share/geometry_msgs/cmake
 
 //Value Computed by CMake
+gmapping_BINARY_DIR:STATIC=/home/rodrigo/catkin_ws/build/slam_gmapping/gmapping
+
+//Value Computed by CMake
+gmapping_SOURCE_DIR:STATIC=/home/rodrigo/catkin_ws/src/slam_gmapping/gmapping
+
+//Value Computed by CMake
 gmock_BINARY_DIR:STATIC=/home/rodrigo/catkin_ws/build/gtest/googlemock
 
 //Dependencies for the target
@@ -427,8 +487,89 @@ gtest_hide_internal_symbols:BOOL=OFF
 //Dependencies for the target
 gtest_main_LIB_DEPENDS:STATIC=general;-lpthread;general;gtest;
 
+//Value Computed by CMake
+hector_compressed_map_transport_BINARY_DIR:STATIC=/home/rodrigo/catkin_ws/build/hector_slam/hector_compressed_map_transport
+
+//Value Computed by CMake
+hector_compressed_map_transport_SOURCE_DIR:STATIC=/home/rodrigo/catkin_ws/src/hector_slam/hector_compressed_map_transport
+
+//Value Computed by CMake
+hector_imu_attitude_to_tf_BINARY_DIR:STATIC=/home/rodrigo/catkin_ws/build/hector_slam/hector_imu_attitude_to_tf
+
+//Value Computed by CMake
+hector_imu_attitude_to_tf_SOURCE_DIR:STATIC=/home/rodrigo/catkin_ws/src/hector_slam/hector_imu_attitude_to_tf
+
+//Value Computed by CMake
+hector_imu_tools_BINARY_DIR:STATIC=/home/rodrigo/catkin_ws/build/hector_slam/hector_imu_tools
+
+//Value Computed by CMake
+hector_imu_tools_SOURCE_DIR:STATIC=/home/rodrigo/catkin_ws/src/hector_slam/hector_imu_tools
+
+//Value Computed by CMake
+hector_map_server_BINARY_DIR:STATIC=/home/rodrigo/catkin_ws/build/hector_slam/hector_map_server
+
+//Value Computed by CMake
+hector_map_server_SOURCE_DIR:STATIC=/home/rodrigo/catkin_ws/src/hector_slam/hector_map_server
+
+//Value Computed by CMake
+hector_map_tools_BINARY_DIR:STATIC=/home/rodrigo/catkin_ws/build/hector_slam/hector_map_tools
+
+//The directory containing a CMake configuration file for hector_map_tools.
+hector_map_tools_DIR:PATH=/home/rodrigo/catkin_ws/devel/share/hector_map_tools/cmake
+
+//Value Computed by CMake
+hector_map_tools_SOURCE_DIR:STATIC=/home/rodrigo/catkin_ws/src/hector_slam/hector_map_tools
+
+//Value Computed by CMake
+hector_mapping_BINARY_DIR:STATIC=/home/rodrigo/catkin_ws/build/hector_slam/hector_mapping
+
+//Value Computed by CMake
+hector_mapping_SOURCE_DIR:STATIC=/home/rodrigo/catkin_ws/src/hector_slam/hector_mapping
+
+//Value Computed by CMake
+hector_marker_drawing_BINARY_DIR:STATIC=/home/rodrigo/catkin_ws/build/hector_slam/hector_marker_drawing
+
+//The directory containing a CMake configuration file for hector_marker_drawing.
+hector_marker_drawing_DIR:PATH=/home/rodrigo/catkin_ws/devel/share/hector_marker_drawing/cmake
+
+//Value Computed by CMake
+hector_marker_drawing_SOURCE_DIR:STATIC=/home/rodrigo/catkin_ws/src/hector_slam/hector_marker_drawing
+
+//Value Computed by CMake
+hector_nav_msgs_BINARY_DIR:STATIC=/home/rodrigo/catkin_ws/build/hector_slam/hector_nav_msgs
+
+//The directory containing a CMake configuration file for hector_nav_msgs.
+hector_nav_msgs_DIR:PATH=/home/rodrigo/catkin_ws/devel/share/hector_nav_msgs/cmake
+
+//Value Computed by CMake
+hector_nav_msgs_SOURCE_DIR:STATIC=/home/rodrigo/catkin_ws/src/hector_slam/hector_nav_msgs
+
+//Value Computed by CMake
+hector_slam_BINARY_DIR:STATIC=/home/rodrigo/catkin_ws/build/hector_slam/hector_slam
+
+//Value Computed by CMake
+hector_slam_SOURCE_DIR:STATIC=/home/rodrigo/catkin_ws/src/hector_slam/hector_slam
+
+//Value Computed by CMake
+hector_slam_launch_BINARY_DIR:STATIC=/home/rodrigo/catkin_ws/build/hector_slam/hector_slam_launch
+
+//Value Computed by CMake
+hector_slam_launch_SOURCE_DIR:STATIC=/home/rodrigo/catkin_ws/src/hector_slam/hector_slam_launch
+
+//Value Computed by CMake
+hector_trajectory_server_BINARY_DIR:STATIC=/home/rodrigo/catkin_ws/build/hector_slam/hector_trajectory_server
+
+//Value Computed by CMake
+hector_trajectory_server_SOURCE_DIR:STATIC=/home/rodrigo/catkin_ws/src/hector_slam/hector_trajectory_server
+
 //The directory containing a CMake configuration file for image_transport.
 image_transport_DIR:PATH=/opt/ros/melodic/share/image_transport/cmake
+
+//The directory containing a CMake configuration file for kdl_conversions.
+kdl_conversions_DIR:PATH=/opt/ros/melodic/share/kdl_conversions/cmake
+
+//The directory containing a CMake configuration file for laser_geometry.
+laser_geometry_DIR:PATH=/opt/ros/melodic/share/laser_geometry/cmake
 
 //Path to a library.
 lib:FILEPATH=/opt/ros/melodic/lib/libxmlrpcpp.so
@@ -447,6 +588,9 @@ nav_msgs_DIR:PATH=/opt/ros/melodic/share/nav_msgs/cmake
 
 //The directory containing a CMake configuration file for nodelet.
 nodelet_DIR:PATH=/opt/ros/melodic/share/nodelet/cmake
+
+//The directory containing a CMake configuration file for openslam_gmapping.
+openslam_gmapping_DIR:PATH=openslam_gmapping_DIR-NOTFOUND
 
 //The directory containing a CMake configuration file for pluginlib.
 pluginlib_DIR:PATH=/opt/ros/melodic/share/pluginlib/cmake
@@ -511,6 +655,12 @@ rostime_DIR:PATH=/opt/ros/melodic/share/rostime/cmake
 //The directory containing a CMake configuration file for sensor_msgs.
 sensor_msgs_DIR:PATH=/opt/ros/melodic/share/sensor_msgs/cmake
 
+//Value Computed by CMake
+slam_gmapping_BINARY_DIR:STATIC=/home/rodrigo/catkin_ws/build/slam_gmapping/slam_gmapping
+
+//Value Computed by CMake
+slam_gmapping_SOURCE_DIR:STATIC=/home/rodrigo/catkin_ws/src/slam_gmapping/slam_gmapping
+
 //The directory containing a CMake configuration file for smclib.
 smclib_DIR:PATH=/opt/ros/melodic/share/smclib/cmake
 
@@ -532,11 +682,17 @@ tf2_ros_DIR:PATH=/opt/ros/melodic/share/tf2_ros/cmake
 //The directory containing a CMake configuration file for tf.
 tf_DIR:PATH=/opt/ros/melodic/share/tf/cmake
 
+//The directory containing a CMake configuration file for tf_conversions.
+tf_conversions_DIR:PATH=/opt/ros/melodic/share/tf_conversions/cmake
+
 //Value Computed by CMake
 tk_llc_BINARY_DIR:STATIC=/home/rodrigo/catkin_ws/build/tk_llc
 
 //Value Computed by CMake
 tk_llc_SOURCE_DIR:STATIC=/home/rodrigo/catkin_ws/src/tk_llc
+
+//The directory containing a CMake configuration file for visualization_msgs.
+visualization_msgs_DIR:PATH=/opt/ros/melodic/share/visualization_msgs/cmake
 
 //The directory containing a CMake configuration file for xmlrpcpp.
 xmlrpcpp_DIR:PATH=/opt/ros/melodic/share/xmlrpcpp/cmake
@@ -552,6 +708,38 @@ ydlidar_SOURCE_DIR:STATIC=/home/rodrigo/catkin_ws/src/ydlidar
 # INTERNAL cache entries
 ########################
 
+//ADVANCED property for variable: Boost_ATOMIC_LIBRARY_DEBUG
+Boost_ATOMIC_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_ATOMIC_LIBRARY_RELEASE
+Boost_ATOMIC_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_CHRONO_LIBRARY_DEBUG
+Boost_CHRONO_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_CHRONO_LIBRARY_RELEASE
+Boost_CHRONO_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_DATE_TIME_LIBRARY_DEBUG
+Boost_DATE_TIME_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_DATE_TIME_LIBRARY_RELEASE
+Boost_DATE_TIME_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_DIR
+Boost_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_INCLUDE_DIR
+Boost_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_LIBRARY_DIR_DEBUG
+Boost_LIBRARY_DIR_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_LIBRARY_DIR_RELEASE
+Boost_LIBRARY_DIR_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_SIGNALS_LIBRARY_DEBUG
+Boost_SIGNALS_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_SIGNALS_LIBRARY_RELEASE
+Boost_SIGNALS_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_SYSTEM_LIBRARY_DEBUG
+Boost_SYSTEM_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_SYSTEM_LIBRARY_RELEASE
+Boost_SYSTEM_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_THREAD_LIBRARY_DEBUG
+Boost_THREAD_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_THREAD_LIBRARY_RELEASE
+Boost_THREAD_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //catkin environment
 CATKIN_ENV:INTERNAL=/home/rodrigo/catkin_ws/build/catkin_generated/env_cached.sh
 CATKIN_TEST_RESULTS_DIR:INTERNAL=/home/rodrigo/catkin_ws/build/test_results
@@ -661,7 +849,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=10
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=21
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -702,6 +890,8 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding OpenCV
+FIND_PACKAGE_MESSAGE_DETAILS_OpenCV:INTERNAL=[/usr][v3.3.1()]
 //Details about finding PythonInterp
 FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python2][v2.7.15()]
 //Details about finding Threads
@@ -732,4 +922,16 @@ PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
 //  And it needs to match.  But setuptools won't tell us where
 // it will install things.
 PYTHON_INSTALL_DIR:INTERNAL=lib/python2.7/dist-packages
+//Components requested for this build tree.
+_Boost_COMPONENTS_SEARCHED:INTERNAL=atomic;chrono;date_time;signals;system;thread
+//Last used Boost_INCLUDE_DIR value.
+_Boost_INCLUDE_DIR_LAST:INTERNAL=/usr/include
+//Last used Boost_LIBRARY_DIR_DEBUG value.
+_Boost_LIBRARY_DIR_DEBUG_LAST:INTERNAL=/usr/lib/aarch64-linux-gnu
+//Last used Boost_LIBRARY_DIR_RELEASE value.
+_Boost_LIBRARY_DIR_RELEASE_LAST:INTERNAL=/usr/lib/aarch64-linux-gnu
+//Last used Boost_NAMESPACE value.
+_Boost_NAMESPACE_LAST:INTERNAL=boost
+//Last used Boost_USE_MULTITHREADED value.
+_Boost_USE_MULTITHREADED_LAST:INTERNAL=TRUE
 

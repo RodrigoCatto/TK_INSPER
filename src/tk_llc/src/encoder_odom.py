@@ -33,10 +33,10 @@ def callback_vel_rpm(data):
 
 def callback_cmd_servo(data): # Pegar o dado de apenas 1 dos valores
     global servo_value 
-    servo_value = data.data
+    servo_value = data.data[0]
  
 rospy.Subscriber("encoder", Int32, callback_vel_rpm)
-rospy.Subscriber("servo_pos", Int32, callback_cmd_servo) # Nome do topico
+rospy.Subscriber("servo", UInt16MultiArray, callback_cmd_servo) # Nome do topico
 
 wheel_radius = 4/100 #meters
 convert_rpm_ms =  (2*pi*wheel_radius)/60 
@@ -46,9 +46,10 @@ r = rospy.Rate(60)
 while not rospy.is_shutdown():
     current_time = rospy.Time.now()
     
-    vx = vel_rpm * 0.001396263 * 3 /100 #m/s
+    vx = vel_rpm * 0.000398            #0.001396263 * 3 /100 #m/s       --- * 0.02099 
     #print(vx)
     vy = 0
+    servo_value = 105
     servo_angle_rad = radians(0.5595*servo_value - 58.744) #rad
     #print(0.5595*servo_value - 58.744)
     vth = vx * tan(servo_angle_rad) / wheelbase_ #rad/s
