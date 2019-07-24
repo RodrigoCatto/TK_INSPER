@@ -85,12 +85,12 @@ class TkkLowLevelCtrl():
         
         #--- Set the control rate
         rate = rospy.Rate(10)
-
+	
         while not rospy.is_shutdown():
             
             if not self.is_controller_connected:
                 self.set_actuators_idle()
-
+	
             rate.sleep()
 
 if __name__ == "__main__":
